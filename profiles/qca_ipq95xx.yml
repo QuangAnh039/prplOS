@@ -1,0 +1,46 @@
+---
+profiles:
+  - prpl_freedom
+target: ipq95xx
+subtarget: generic
+external_target: True
+description: Build image for prpl Foundation Freedom board
+feeds:
+  - name: feed_qca
+    uri: https://gitlab.com/prpl-foundation/prplOS/feed-qca.git
+    revision: latest-24.10@a1ef4c15ef907b593e7cf3fd9445a4d878f884a0
+
+packages:
+  - ipq95xx
+  - wireless-regdb
+  - hostapd-qca-utils
+  - ath12k-caldata
+  - aq-fw-download
+  - aq_phy
+  - qca-ssdk-shell
+  - efr32-boot-config
+  - wireless-freedom
+  - kmod-usb-phy-ipq807x
+  - kmod-usb-dwc3-internal
+  - kmod-usb-dwc3-qcom-internal
+  - kmod-usb-storage
+  - kmod-usb-storage-extras
+  - kmod-usb-storage-uas
+  - kmod-fs-vfat
+  - kmod-telemetry-agent
+  - kmod-i2c-mux-pca954x
+  - kmod-gpio-pca953x
+  - kmod-leds-lp5562
+  - freedom-lcm-partitioner
+  - kmod-qca8084
+  - kmod-qca81xx
+  - kmod-qca8xxx-phc
+  - kmod-ppp
+  - kmod-pppoe
+
+diffconfig: |
+  CONFIG_TARGET_INITRAMFS_COMPRESSION_LZMA=y
+  CONFIG_BUSYBOX_CUSTOM=y
+  CONFIG_BUSYBOX_CONFIG_I2CSET=y
+  CONFIG_PACKAGE_ATH_DEBUG=y
+  # CONFIG_PACKAGE_wififw_mount_script is not set

@@ -1,0 +1,106 @@
+---
+description: Add the prpl features
+
+include:
+  - prpl_core
+  - lcm
+  - mgmt
+
+additional_packages:
+  - feed: packages
+    packages:
+      - opensc
+      - pciids
+      - pciutils
+      - picocom
+      - usbids
+      - usbutils
+
+packages:
+  - dhcpv4-manager
+  - dhcpv6s-manager
+  - dmtui
+  - gmap-client
+  - gmap-mibs-common
+  - gmap-mod-ethernet-dev
+  - gmap-mod-name-selector
+  - gmap-mod-self
+  - gmap-server
+  - hosts-manager
+  - ip-manager
+  - ip6tables-zz-legacy
+  - iptables-mod-ipopt
+  - iptables-zz-legacy
+  - libdhcpoptions
+  - libfwinterface
+  - libfwrules
+  - libnetmodel
+  - libp11
+  - lighttpd
+  - lighttpd-mod-auth
+  - lighttpd-mod-authn_file
+  - lighttpd-mod-fastcgi
+  - lighttpd-mod-openssl
+  - lua-amx
+  - mcastd-core
+  - mcastd-noforward
+  - mcastd-routing
+  - miniupnpd-prpl
+  - mod-autosensing
+  - mod-busstats
+  - mod-httpaccess-lighttpd
+  - mod-ppp-daemon
+  - mod-ra-radvd
+  - mod-routing-dhcp
+  - mod-wanmgr-sfp
+  - mod-wanmgr-system
+  - mod-xpon-prpl
+  - netmodel-dslite
+  - netmodel-gni
+  - netmodel-ppp
+  - netmodel-xpon
+  - prpl-webui
+  - pkcs11-provider
+  - softhsm2
+  - tr181-bulkdata
+  - tr181-captiveportal
+  - tr181-conntrack-query
+  - tr181-conmon
+  - tr181-dnssd
+  - tr181-dslite
+  - tr181-dynamicdns
+  - tr181-gnimanager
+  - tr181-homeplug
+  - tr181-httpaccess
+  - tr181-ipdiagnostics
+  - tr181-powerstatus
+  - tr181-logical
+  - tr181-mcastd
+  - tr181-mqtt
+  - tr181-mqttbroker
+  - tr181-neighbordiscovery
+  - tr181-pcp
+  - tr181-ppp
+  - tr181-rest-api
+  - tr181-routeradvertisement
+  - tr181-sfp
+  - tr181-upnp
+  - tr181-upnpdiscovery
+  - tr181-usb
+  - tr181-xpon
+  - wan-manager
+  - wifi-scheduler
+
+diffconfig: |
+          CONFIG_PACKAGE_ppp-prpl=y
+          # CONFIG_PACKAGE_dnsmasq is not set
+          # CONFIG_LIGHTTPD_CRYPTOLIB_MBEDTLS is not set
+          CONFIG_LIGHTTPD_CRYPTOLIB_OPENSSL=y
+          CONFIG_SAH_AMX_TR181_DEVICE_OBUSPA_SUPPORT=y
+          CONFIG_SAH_WLD_ENABLE_USP_SERVER_SOCKET=y
+          CONFIG_PACKAGE_mod-xpon-prpl-mock=m
+          CONFIG_PACKAGE_ipset=y
+          # pkcs11-tool
+          CONFIG_PACKAGE_libopensc=y
+          CONFIG_PACKAGE_opensc-utils=y
+          CONFIG_PACKAGE_opensc-utils-pkcs11-tool=y

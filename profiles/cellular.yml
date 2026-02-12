@@ -1,0 +1,26 @@
+---
+description: Add cellular features
+
+additional_packages:
+  - feed: packages
+    packages:
+      - glib2
+      - mbim-utils
+      - qmi-utils
+
+packages:
+  - cellular-manager
+  - kmod-mhi-net
+  - kmod-mhi-wwan-ctrl
+  - kmod-mhi-wwan-mbim
+  - kmod-mhi-bus
+  - kmod-mhi-pci-generic
+  - kmod-usb-net-qmi-wwan
+  - kmod-usb-serial-option
+  - mod-cellular-libmm
+  - netmodel-cellular
+  - umbim
+  - uqmi
+
+diffconfig: |
+          CONFIG_PACKAGE_lua-cjson=m
