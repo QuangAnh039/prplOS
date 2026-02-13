@@ -82,7 +82,6 @@ packages:
   - tc-tiny
   - time-manager
   - tr181-bridging
-  - tr181-button
   - tr181-device
   - tr181-dhcpv4client
   - tr181-dhcpv6client

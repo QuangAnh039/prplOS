@@ -60,7 +60,8 @@ diffconfig: |
   # Network features
   CONFIG_PACKAGE_firewall4=y
   # CONFIG_PACKAGE_dnsmasq is not set
-
+  # CONFIG_PACKAGE_kmod-input-gpio-keys is not set
+  
   # WiFi support
   CONFIG_PACKAGE_kmod-mt7915e=y
   CONFIG_PACKAGE_kmod-mt7986-firmware=y
