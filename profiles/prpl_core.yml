@@ -1,18 +1,51 @@
 ---
 description: A minimal set of prpl packages and configs (no WAN support, no LCM, no management) common to prpl device classes (Gateway, Extender, ...)
 feeds:
+
+  - name: feed_opensource
+    uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed_opensource.git
+    revision: mainline-3.2@56e7da984966db8a5b33c90f8c227762e713428a
   - name: feed_amx
-    uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed_amx.git
-    revision: main@f5e613d6ab1c2c3fa11dde94f6dd197b0a5a3b48
+    uri: https://github.com/QuangAnh039/feed_amx
+    revision: main@550ccb3d8e68e9460d52d431f32c54482cf26693
+  - name: feed_gmap
+    uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed_gmap.git
+    revision: main@e364fb2c327254ea711077cc0a7f9c66640d4d76
+  - name: feed_net_core
+    uri: https://github.com/QuangAnh039/feed_net_core
+    revision: main@40e59c66e793094b6ab7768454e965543723f3af  
+  - name: feed_qos_firewall
+    uri: https://github.com/QuangAnh039/feed_qos_firewall
+    revision: main@815ac593d7a76e802148f11bc36671230a9f56a4
+  - name: feed_net_services
+    uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed_net_services.git
+    revision: mainline-3.2@9a837f55309a82d5add35f7f5f070da56b592132
+  - name: feed_net_hl_services
+    uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed_net_hl_services.git
+    revision: mainline-3.2@f013788e0eee196303432b2146f10da8919bccd4 
 
-  - name: feed_prplmesh
-    uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed-prplmesh.git
-    revision: main@e7d39d9cb34123b842c66e68ba8a257aad376d40
 
-  - name: feed_prplos
-    uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed-prplos.git
-    revision: main@7d4d83cbb1acded1bb4b73d4f1f9b9a94649b403
-
+  - name: feed_debug
+    uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed_debug.git
+    revision: main@7cfbdecff18d08c336944d881668612a8d555a6c
+  - name: feed_netmodel
+    uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed_netmodel.git
+    revision: main@aafe5dc749e90f4b2361b5c9d6cf89bd2c0d45b8
+  - name: feed_wifi_swl
+    uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed_wifi_swl.git
+    revision: main@8a4a752bfdf8a261127ee50a08b0abc395bdcc36
+  - name: feed_wifi_core
+    uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed_wifi_core.git
+    revision: mainline-3.2@04b7b585317fa097705c1cb835a571f4deccf258
+  - name: feed_prpl
+    uri: https://github.com/QuangAnh039/feed_prpl
+    revision: main@dfaea8a9d27a21c7c366cdd6c611c13dde2742cc
+  - name: feed_usp
+    uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed_usp
+    revision: mainline-3.2@c31785a3bfc0b32c42d15023748e8bae382b4dfe
+  - name: feed_board_configuration
+    uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed_board_configuration
+    revision: main@6191e6a333702a049fe8193fabc5945232f8eef8
 additional_packages:
   - feed: packages
     packages:

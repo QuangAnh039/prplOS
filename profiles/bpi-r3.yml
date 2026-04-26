@@ -6,7 +6,7 @@ external_target: False
 
 profiles:
   - bpi-r3
-feeds:
+# feeds:
   # - name: feed_mediatek
   #   uri: https://gitlab.com/prpl-foundation/prplos/feeds/feed-mediatek
   #   revision: main@3b9dd8fe98707217963f3202c6b39777309dcdfe
@@ -64,6 +64,7 @@ diffconfig: |
   # WiFi support
   CONFIG_PACKAGE_kmod-mt7915e=y
   CONFIG_PACKAGE_kmod-mt7986-firmware=y
+  CONFIG_PACKAGE_hostapd-common=y
   CONFIG_PACKAGE_hostapd-utils=y
   CONFIG_PACKAGE_wpad-basic-mbedtls=y
   CONFIG_PACKAGE_libudebug=y
